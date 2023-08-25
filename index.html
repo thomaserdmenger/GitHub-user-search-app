@@ -9,9 +9,34 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
     <title>GitHub user search app</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header-container">
+      <h1 class="header-heading">devfinder</h1>
+      <div class="header-mode-container">
+        <button class="header-mode-text">Dark</button>
+        <img class="header-mode-image" src="./images/icon-moon.svg" alt="#" />
+      </div>
+    </header>
+    <section>
+      <form class="search-form" action="#">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search GitHub username…"
+        />
+        <img class="search-icon" src="./images/icon-search.svg" alt="#" />
+        <button class="search-button" type="submit">Search</button>
+      </form>
+    </section>
+  </body>
 </html>

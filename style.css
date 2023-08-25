@@ -1,10 +1,26 @@
 :root {
+  --color-blue-button: #0079ff;
+  --color-blue-button-hover: #60abff;
+  --color-red: #f74646;
+  --color-white: #ffffff;
+  --border-radius-10: 10px;
+  --border-radius-15: 15px;
 }
 
 [data-theme="light"] {
+  --color-text: #4b6a9b;
+  --color-heading: #2b3442;
+  --color-background-main: #f6f8ff;
+  --color-background-card: #fefefe;
+  --color-background-stats: #f6f8ff;
 }
 
 [data-theme="dark"] {
+  --color-text: #ffffff;
+  --color-heading: #ffffff;
+  --color-background-main: #141d2f;
+  --color-background-card: #1e2a47;
+  --color-background-stats: #141d2f;
 }
 
 *,
@@ -16,5 +32,96 @@
 }
 
 body {
+  font-family: "Space Mono", monospace;
   min-height: 100dvh;
+  padding: 1.9375rem 1.5rem;
+  color: var(--color-text);
+  background-color: var(--color-background-main);
+}
+
+/****************************************************************************** HEADER */
+
+.header-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-heading {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.header-mode-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header-mode-text {
+  all: unset;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-right: 1rem;
+  text-align: end;
+  text-transform: uppercase;
+}
+
+.header-mode-image {
+  width: 20px;
+  height: 20px;
+}
+
+/****************************************************************************** SEARCH BAR */
+
+.search-form {
+  position: relative;
+  margin: 2.1875rem 0 1rem 0;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+
+.search-input {
+  all: unset;
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-15);
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 25px;
+  padding: 18px 0 17px 45px;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: var(--color-text);
+}
+
+.search-icon {
+  height: 20px;
+  left: 16px;
+  position: absolute;
+  top: 20px;
+}
+
+.search-button {
+  all: unset;
+  background-color: var(--color-blue-button);
+  border-radius: var(--border-radius-10);
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.7813rem 1.125rem;
+  position: absolute;
+  right: 7px;
+  text-align: center;
+  top: 6.5px;
+}
+
+.search-button:hover {
+  background-color: var(--color-blue-button-hover);
 }
