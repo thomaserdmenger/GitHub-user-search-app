@@ -3,28 +3,41 @@ const form = document.querySelector(".search-form");
 const input = document.querySelector(".search-input");
 
 const GITHUB_API = "https://api.github.com/users";
-let gitHubUser = "";
+let userNameInput = "";
+
+// Get side content
+const userFullName = document.querySelector(".card-media-username");
+const userLogin = document.querySelector(".card-media-address");
+const userJoined = document.querySelector(".card-media-joined");
 
 // Get userinput
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  gitHubUser = input.value;
+  userNameInput = input.value;
 
-  if (input.value === "") return;
+  if (userNameInput === "") return;
 
   getData();
 });
 
+// Fetch data
 async function getData() {
-  const response = await fetch(`${GITHUB_API}/${gitHubUser}`);
-  const data = await response.json();
-  console.log(data.name);
-}
+  try {
+    const response = await fetch(`${GITHUB_API}/${userNameInput}`);
 
-// Get side content
-// const userFullName = document.querySelector(".card-media-username");
-// const userLogin = document.querySelector(".card-media-address");
-// const userJoined = document.querySelector(".card-media-joined");
+    if (!response.ok) {
+      throw new Error("Please enter valid GitHub user name");
+    }
+
+    const data = await response.json();
+
+    if (userNameInput === data.login) {
+      console.log(true);
+    }
+  } catch (error) {
+    alert(error.message);
+  }
+}
 
 // GET DATA
 // const getUser = async () => {
