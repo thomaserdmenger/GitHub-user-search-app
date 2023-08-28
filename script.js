@@ -9,6 +9,7 @@ let userNameInput = "";
 const userFullName = document.querySelector(".card-media-username");
 const userLogin = document.querySelector(".card-media-address");
 const userJoined = document.querySelector(".card-media-joined");
+const userImage = document.querySelector(".card-media-image");
 
 // Get userinput
 form.addEventListener("submit", (e) => {
@@ -32,66 +33,46 @@ async function getData() {
     const data = await response.json();
 
     if (userNameInput === data.login) {
-      console.log(true);
+      renderCardMediaContainerContent(data);
     }
   } catch (error) {
     alert(error.message);
   }
 }
 
-// GET DATA
-// const getUser = async () => {
-//   const response = await fetch(`https://api.github.com/users/thomaserdmenger`);
-//   const data = await response.json();
+function renderCardMediaContainerContent(data) {
+  userFullName.textContent = data.name;
+  userLogin.textContent = `@${data.login}`;
+  renderDate(data);
+  userImage.setAttribute("src", `${data.avatar_url}`);
+  // renderImage(data);
+}
 
-//   form.addEventListener("submit", (e) => {
-//     e.preventDefault();
+function renderDate(data) {
+  const date = new Date(data.created_at);
+  const year = date.getFullYear();
 
-//     const inputName = getSearchInput();
-//     const userName = data.login;
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
-//     if (inputName === userName) {
-//       renderCardContent(data);
-//     } else {
-//       // console.log(false);
-//     }
-//   });
-// };
+  const month = monthNames[date.getMonth()];
+  const day = date.getDate();
 
-// function getSearchInput() {
-//   const username = input.value;
-//   return username;
+  userJoined.textContent = `Joined ${day} ${month} ${year}`;
+}
+
+// function renderImage(data) {
+//   userImage.setAttribute("src", `${data.avatar_url}`);
 // }
-
-// function renderCardContent(data) {
-//   userFullName.textContent = data.name;
-//   userLogin.textContent = `@${data.login}`;
-//   renderDate(data);
-// }
-
-// function renderDate(data) {
-//   const date = new Date(data.created_at);
-//   const year = date.getFullYear();
-
-//   const monthNames = [
-//     "Jan",
-//     "Feb",
-//     "Mar",
-//     "Apr",
-//     "May",
-//     "Jun",
-//     "Jul",
-//     "Aug",
-//     "Sep",
-//     "Oct",
-//     "Nov",
-//     "Dec",
-//   ];
-
-//   const month = monthNames[date.getMonth()];
-//   const day = date.getDate();
-
-//   userJoined.textContent = `Joined ${day} ${month} ${year}`;
-// }
-
-// getUser();
