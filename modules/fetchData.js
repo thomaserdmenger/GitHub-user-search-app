@@ -3,6 +3,7 @@ import { userNameInput } from "../script.js";
 import renderCardMediaContainerContent from "./renderCardMedia.js";
 import renderStats from "./renderStats.js";
 import renderCardBio from "./renderCardBio.js";
+import renderLinks from "./renderLinks.js";
 
 // Define API URL
 const GITHUB_API_URL = "https://api.github.com/users";
@@ -22,6 +23,7 @@ export default async function getData() {
       renderCardMediaContainerContent(data);
       renderCardBio(data);
       renderStats(data);
+      renderLinks(data);
     }
   } catch (error) {
     alert(error.message);
