@@ -138,6 +138,10 @@ body {
   display: none;
 }
 
+.show {
+  display: inline-block;
+}
+
 /****************************************************************************** MAIN CARD */
 
 .card-container {
