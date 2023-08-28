@@ -1,6 +1,7 @@
 // Import modules
 import { userNameInput } from "../script.js";
 import renderCardMediaContainerContent from "./renderCardMedia.js";
+import renderCardBio from "./renderCardBio.js";
 
 // Define API URL
 const GITHUB_API_URL = "https://api.github.com/users";
@@ -18,6 +19,7 @@ export default async function getData() {
 
     if (userNameInput === data.login) {
       renderCardMediaContainerContent(data);
+      renderCardBio(data);
     }
   } catch (error) {
     alert(error.message);
