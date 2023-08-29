@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   // Check input vs. username
-  userNameInput = input.value;
+  userNameInput = input.value.toLowerCase();
 
   if (userNameInput === "") return;
 

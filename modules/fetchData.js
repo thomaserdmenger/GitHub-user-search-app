@@ -22,7 +22,7 @@ export default async function getData() {
 
     const data = await response.json();
 
-    if (userNameInput === data.login) {
+    if (userNameInput === data.login.toLowerCase()) {
       errorMessage.classList.remove("show");
       input.value = "";
       input.setAttribute("placeholder", "Search GitHub username…");
