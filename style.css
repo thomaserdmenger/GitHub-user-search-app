@@ -138,10 +138,6 @@ body {
   display: none;
 }
 
-.show {
-  display: inline-block;
-}
-
 /****************************************************************************** MAIN CARD */
 
 .card-container {
@@ -149,6 +145,7 @@ body {
   background-color: var(--color-background-card);
   border-radius: var(--border-radius-15);
   box-shadow: var(--box-shadow);
+  display: none;
 }
 
 .card-media-container {
@@ -391,4 +388,8 @@ body {
     top: 3.25rem;
     right: 3rem;
   }
+}
+
+.show {
+  display: inline-block;
 }

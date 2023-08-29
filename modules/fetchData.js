@@ -7,6 +7,7 @@ import renderLinks from "./renderLinks.js";
 
 const errorMessage = document.querySelector(".search-error-message");
 const input = document.querySelector(".search-input");
+const cardContainer = document.querySelector(".card-container");
 
 // Define API URL
 const GITHUB_API_URL = "https://api.github.com/users";
@@ -31,6 +32,9 @@ export default async function getData() {
       renderCardBio(data);
       renderStats(data);
       renderLinks(data);
+
+      // Show card container
+      cardContainer.classList.add("show");
     }
   } catch (error) {
     errorMessage.classList.add("show");
