@@ -222,6 +222,11 @@ body {
   color: var(--color-heading);
 }
 
+.card-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-links {
   display: flex;
   align-items: center;
@@ -252,4 +257,108 @@ body {
 
 .card-links-image {
   height: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 8.75rem 6.0625rem;
+  }
+
+  /****************************************************************************** SEARCH BAR */
+
+  .search-form {
+    margin-bottom: 1.5rem;
+  }
+
+  .search-input {
+    font-size: 1.125rem;
+    padding: 1.375rem 0 1.375rem 5rem;
+  }
+
+  .search-icon {
+    height: 24px;
+    left: 32px;
+    top: 24px;
+  }
+
+  .search-button {
+    font-size: 1rem;
+    padding: 0.7813rem 1.5rem;
+    right: 10px;
+    text-align: center;
+    top: 9.5px;
+  }
+
+  .search-error-message {
+    top: 24px;
+    right: 140px;
+  }
+
+  /****************************************************************************** MAIN CARD */
+
+  .card-container {
+    padding: 2.5rem;
+  }
+
+  .card-media-image {
+    height: 117px;
+    margin-right: 2.5625rem;
+  }
+
+  .card-media-username {
+    font-size: 1.625rem;
+    margin-bottom: 0.125rem;
+  }
+
+  .card-media-address {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .card-media-joined {
+    font-size: 0.9375rem;
+  }
+
+  .card-description-container {
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .card-description {
+    font-size: 0.9375rem;
+  }
+
+  .card-stats-container {
+    padding: 0.9375rem 0 1.0625rem 0;
+    margin-bottom: 1.875rem;
+  }
+
+  .card-stats-name {
+    font-size: 0.8125rem;
+    margin-bottom: 0.0625rem;
+  }
+
+  .card-stats-numbers {
+    font-size: 1.375rem;
+  }
+
+  .card-links-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-links-left {
+    width: 50%;
+  }
+
+  .card-links-right {
+    width: 50%;
+  }
+
+  .card-links {
+    margin-bottom: 1.1875rem;
+  }
+
+  .card-links-text {
+    font-size: 0.9375rem;
+  }
 }
