@@ -145,6 +145,7 @@ body {
   background-color: var(--color-background-card);
   border-radius: var(--border-radius-15);
   box-shadow: var(--box-shadow);
+  width: 100%;
   display: none;
 }
 
