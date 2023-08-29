@@ -15,8 +15,17 @@ export default function renderLinks(data) {
 }
 
 function renderLocation(data) {
-  userLocation.textContent = data.location;
-  userLocation.setAttribute("href", `${GOOGLE_MAPS_URL}${data.location}`);
+  userLocation.setAttribute("role", "link");
+
+  if (data.twitter_username === null) {
+    userLocation.removeAttribute("href");
+    userLocation.textContent = "Not Available";
+    userLocation.setAttribute("aria-disabled", "true");
+  } else {
+    userLocation.textContent = data.location;
+    userLocation.setAttribute("href", `${GOOGLE_MAPS_URL}${data.location}`);
+    userLocation.setAttribute("aria-disabled", "false");
+  }
 }
 
 function renderBlog(data) {
