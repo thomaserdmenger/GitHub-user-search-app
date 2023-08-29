@@ -40,5 +40,6 @@ export default async function getData() {
     errorMessage.classList.add("show");
     input.value = "";
     input.setAttribute("placeholder", "");
+    cardContainer.classList.remove("show");
   }
 }
