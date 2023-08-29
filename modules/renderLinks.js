@@ -23,7 +23,6 @@ function renderBlog(data) {
   userBlog.setAttribute("role", "link");
 
   if (data.blog !== "") {
-    userBlog.textContent = data.blog;
     userBlog.setAttribute("aria-disabled", "false");
 
     updateURL(data);
@@ -36,10 +35,8 @@ function renderBlog(data) {
 
 function updateURL(data) {
   if (data.blog.match("https://")) {
-    userBlog.textContent = data.blog;
     userBlog.setAttribute("href", data.blog);
   } else {
-    userBlog.textContent = `https://${data.blog}`;
     userBlog.setAttribute("href", `https://${data.blog}`);
   }
 }
