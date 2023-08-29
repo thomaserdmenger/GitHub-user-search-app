@@ -320,11 +320,25 @@ body {
   }
 
   .card-description-container {
-    margin: 1.25rem 0 2.0625rem 0;
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .card-description {
+    font-size: 0.9375rem;
   }
 
   .card-stats-container {
-    margin-bottom: 2.3125rem;
+    padding: 0.9375rem 0 1.0625rem 0;
+    margin-bottom: 1.875rem;
+  }
+
+  .card-stats-name {
+    font-size: 0.8125rem;
+    margin-bottom: 0.0625rem;
+  }
+
+  .card-stats-numbers {
+    font-size: 1.375rem;
   }
 
   .card-links-container {
@@ -342,6 +356,10 @@ body {
 
   .card-links {
     margin-bottom: 1.1875rem;
+  }
+
+  .card-links-text {
+    font-size: 0.9375rem;
   }
 }
 
@@ -372,35 +390,5 @@ body {
     position: absolute;
     top: 3.25rem;
     right: 3rem;
-  }
-
-  .card-description-container {
-    margin: 1.5rem 0 2rem 0;
-  }
-
-  .card-description {
-    font-size: 0.9375rem;
-  }
-
-  .card-stats-container {
-    padding: 0.9375rem 0 1.0625rem 0;
-    margin-bottom: 1.875rem;
-  }
-
-  .card-stats-name {
-    font-size: 0.8125rem;
-    margin-bottom: 0.0625rem;
-  }
-
-  .card-stats-numbers {
-    font-size: 1.375rem;
-  }
-
-  .card-links {
-    margin-bottom: 1.1875rem;
-  }
-
-  .card-links-text {
-    font-size: 0.9375rem;
   }
 }
