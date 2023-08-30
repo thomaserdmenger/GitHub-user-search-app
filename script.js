@@ -1,12 +1,11 @@
-import getData from "./modules/fetchData.js";
 export let userNameInput = "";
+
+import getData from "./modules/fetchData.js";
+import createHoverEffect from "./modules/modeHoverEffect.js";
 
 // GLOBAL
 const form = document.querySelector(".search-form");
 const input = document.querySelector(".search-input");
-const userBlog = document.querySelector(".card-links-blog");
-
-// TODO: Groß- und Kleinschreibweise: beide sollen funktionieren
 
 // Get userinput
 form.addEventListener("submit", (e) => {
@@ -19,3 +18,6 @@ form.addEventListener("submit", (e) => {
 
   getData();
 });
+
+// Add hover state on mode toggle on header
+createHoverEffect();

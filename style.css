@@ -14,6 +14,8 @@
   --color-background-card: #fefefe;
   --color-background-stats: #f6f8ff;
   --box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  --color-mode: #4b6a9b;
+  --color-mode-hover: #222731;
 }
 
 [data-theme="dark"] {
@@ -23,6 +25,8 @@
   --color-background-card: #1e2a47;
   --color-background-stats: #141d2f;
   --box-shadow: none;
+  --color-mode: #ffffff;
+  --color-mode-hover: #90a4d4;
 }
 
 *,
@@ -63,6 +67,7 @@ body {
 
 .header-mode-text {
   all: unset;
+  color: var(--color-mode);
   cursor: pointer;
   font-size: 0.8125rem;
   font-weight: 700;
@@ -72,9 +77,18 @@ body {
   text-transform: uppercase;
 }
 
+.header-mode-text--hover {
+  color: var(--color-mode-hover);
+}
+
 .header-mode-image {
   width: 20px;
   height: 20px;
+  fill: var(--color-mode);
+}
+
+.header-mode-image--hover {
+  fill: var(--color-mode-hover);
 }
 
 /****************************************************************************** SEARCH BAR */
