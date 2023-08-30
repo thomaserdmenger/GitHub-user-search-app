@@ -394,3 +394,7 @@ body {
 .show {
   display: inline-block;
 }
+
+.unavailable {
+  opacity: 0.5;
+}

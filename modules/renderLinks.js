@@ -21,10 +21,12 @@ function renderLocation(data) {
     userLocation.removeAttribute("href");
     userLocation.textContent = "Not Available";
     userLocation.setAttribute("aria-disabled", "true");
+    userLocation.classList.add("unavailable");
   } else {
     userLocation.textContent = data.location;
     userLocation.setAttribute("href", `${GOOGLE_MAPS_URL}${data.location}`);
     userLocation.setAttribute("aria-disabled", "false");
+    userLocation.classList.remove("unavailable");
   }
 }
 
@@ -35,10 +37,12 @@ function renderBlog(data) {
     userBlog.setAttribute("aria-disabled", "false");
 
     updateURL(data);
+    userBlog.classList.remove("unavailable");
   } else {
     userBlog.removeAttribute("href");
     userBlog.textContent = "Not Available";
     userBlog.setAttribute("aria-disabled", "true");
+    userBlog.classList.add("unavailable");
   }
 }
 
@@ -57,10 +61,12 @@ function renderTwitter(data) {
     userTwitter.removeAttribute("href");
     userTwitter.textContent = "Not Available";
     userTwitter.setAttribute("aria-disabled", "true");
+    userTwitter.classList.add("unavailable");
   } else {
     userTwitter.textContent = `@${data.twitter_username}`;
     userTwitter.setAttribute("href", `${TWITTER_URL}${data.twitter_username}`);
     userTwitter.setAttribute("aria-disabled", "false");
+    userTwitter.classList.remove("unavailable");
   }
 }
 
