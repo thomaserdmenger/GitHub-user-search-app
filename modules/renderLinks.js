@@ -3,6 +3,10 @@ const userBlog = document.querySelector(".card-links-blog");
 const userTwitter = document.querySelector(".card-links-twitter");
 const userGithub = document.querySelector(".card-links-github");
 
+const locationImage = document.querySelector(".card-links-location-icon");
+const blogImage = document.querySelector(".card-links-blog-icon");
+const twitterImage = document.querySelector(".card-links-twitter-icon");
+
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/";
 const TWITTER_URL = "https://twitter.com/";
 const GITHUB_URL = "https://github.com/";
@@ -22,11 +26,13 @@ function renderLocation(data) {
     userLocation.textContent = "Not Available";
     userLocation.setAttribute("aria-disabled", "true");
     userLocation.classList.add("unavailable");
+    locationImage.classList.add("unavailable");
   } else {
     userLocation.textContent = data.location;
     userLocation.setAttribute("href", `${GOOGLE_MAPS_URL}${data.location}`);
     userLocation.setAttribute("aria-disabled", "false");
     userLocation.classList.remove("unavailable");
+    locationImage.classList.remove("unavailable");
   }
 }
 
@@ -37,10 +43,12 @@ function renderBlog(data) {
     userBlog.removeAttribute("href");
     userBlog.textContent = "Not Available";
     userBlog.classList.add("unavailable");
+    blogImage.classList.add("unavailable");
     userBlog.setAttribute("aria-disabled", "true");
   } else {
     userBlog.setAttribute("aria-disabled", "false");
     userBlog.classList.remove("unavailable");
+    blogImage.classList.remove("unavailable");
     userBlog.textContent = "Website";
     updateURL(data);
   }
@@ -62,11 +70,13 @@ function renderTwitter(data) {
     userTwitter.textContent = "Not Available";
     userTwitter.setAttribute("aria-disabled", "true");
     userTwitter.classList.add("unavailable");
+    twitterImage.classList.add("unavailable");
   } else {
     userTwitter.textContent = `@${data.twitter_username}`;
     userTwitter.setAttribute("href", `${TWITTER_URL}${data.twitter_username}`);
     userTwitter.setAttribute("aria-disabled", "false");
     userTwitter.classList.remove("unavailable");
+    twitterImage.classList.remove("unavailable");
   }
 }
 
