@@ -17,7 +17,7 @@ export default function renderLinks(data) {
 function renderLocation(data) {
   userLocation.setAttribute("role", "link");
 
-  if (data.twitter_username === null) {
+  if (data.location === null) {
     userLocation.removeAttribute("href");
     userLocation.textContent = "Not Available";
     userLocation.setAttribute("aria-disabled", "true");
