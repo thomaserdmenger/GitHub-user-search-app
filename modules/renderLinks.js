@@ -33,16 +33,16 @@ function renderLocation(data) {
 function renderBlog(data) {
   userBlog.setAttribute("role", "link");
 
-  if (data.blog !== "") {
-    userBlog.setAttribute("aria-disabled", "false");
-
-    updateURL(data);
-    userBlog.classList.remove("unavailable");
-  } else {
+  if (data.blog === "") {
     userBlog.removeAttribute("href");
     userBlog.textContent = "Not Available";
-    userBlog.setAttribute("aria-disabled", "true");
     userBlog.classList.add("unavailable");
+    userBlog.setAttribute("aria-disabled", "true");
+  } else {
+    userBlog.setAttribute("aria-disabled", "false");
+    userBlog.classList.remove("unavailable");
+    userBlog.textContent = "Website";
+    updateURL(data);
   }
 }
 
