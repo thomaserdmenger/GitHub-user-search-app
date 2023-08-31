@@ -1,7 +1,7 @@
 export let userNameInput = "";
 
 import getData from "./modules/fetchData.js";
-import createHoverEffect from "./modules/modeHoverEffect.js";
+import createHoverEffect from "./modules/themeHoverEffect.js";
 
 // GLOBAL
 const form = document.querySelector(".search-form");
@@ -21,3 +21,13 @@ form.addEventListener("submit", (e) => {
 
 // Add hover state on mode toggle on header
 createHoverEffect();
+
+// temp
+
+import {
+  calculateSettingAsThemeString,
+  localStorageTheme,
+  systemSettingLight,
+} from "./modules/themeSettingCalculate.js";
+
+calculateSettingAsThemeString(localStorageTheme, systemSettingLight);

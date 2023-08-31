@@ -1,8 +1,8 @@
-export default function createHoverEffect() {
-  const headerModeContainer = document.querySelector(".header-mode-container");
-  const headerModeText = document.querySelector(".header-mode-text");
-  const headerModeIcon = document.querySelector(".header-mode-image");
+const headerModeContainer = document.querySelector(".header-mode-container");
+const headerModeText = document.querySelector(".header-mode-text");
+const headerModeIcon = document.querySelector(".header-mode-image");
 
+export default function createHoverEffect() {
   headerModeContainer.addEventListener("mouseenter", () => {
     headerModeText.classList.add("header-mode-text--hover");
     headerModeIcon.classList.add("header-mode-image--hover");
