@@ -72,9 +72,15 @@ body {
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 2.5px;
-  margin-right: 1rem;
   text-align: end;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-mode-text span {
+  margin-right: 1rem;
 }
 
 .header-mode-text--hover {
