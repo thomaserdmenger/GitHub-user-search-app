@@ -1,4 +1,4 @@
-#Github User Search App with Light/Dark Mode
+# Github User Search App with Light/Dark Mode
 
 ## Screenshot
 
