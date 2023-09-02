@@ -6,6 +6,6 @@
 
 ### Links
 
-- [See live site here](https://thomaserdmenger.github.io/newsletter-sign-up/)
-- [GitHub Repository](https://github.com/thomaserdmenger/newsletter-sign-up)
+- [See live site here](https://thomaserdmenger.github.io/GitHub-user-search-app/)
+- [GitHub Repository](https://github.com/thomaserdmenger/GitHub-user-search-app)
 - [GitHub Author](https://github.com/thomaserdmenger)
